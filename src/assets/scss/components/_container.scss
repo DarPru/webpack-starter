@@ -1,0 +1,32 @@
+@use '../mixins/mixins' as *;
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+@include desktop {
+    .container {
+        max-width: 90%;
+    }
+}
+
+@include tablet {
+    .container {
+        padding: 0 10%;
+    }
+}
+
+@include mobile {
+    .container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+}
+
+@include large {
+    .container {
+        max-width: 1440px;
+    }
+}

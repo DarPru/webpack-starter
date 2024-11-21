@@ -1,0 +1,43 @@
+@use '../base/variables' as *;
+@use 'sass:map';
+
+// Media query mixins for responsive design
+
+$mobile-width: 576px;
+$tablet-width: 768px;
+$desktop-width: 1025px;
+
+@mixin mobile {
+    @media (max-width: $mobile-width) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: $mobile-width) and (max-width: $tablet-width) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media (min-width: $desktop-width) {
+        @content;
+    }
+}
+
+
+// Heading mixin
+@mixin heading($level) {
+    font-family: $font-primary;
+    font-size: map.get($heading-sizes, $level);
+    font-weight: 500;
+    color: $color-primary;
+    line-height: 1.2;
+    margin: 0 0 1rem;
+}

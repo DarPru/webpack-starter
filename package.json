@@ -1,29 +1,36 @@
 {
-  "name": "new-folder-(7)",
+  "name": "webpack-base",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack serve --mode development --open",
-    "build": "webpack --mode production"
+    "dev": "webpack serve --config ./webpack/dev-point.js",
+    "build": "set NODE_ENV=production && webpack --config ./webpack/prod-point.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "babel-loader": "^9.2.1",
+    "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^7.1.2",
-    "css-minimizer-webpack-plugin": "^7.0.0",
     "html-webpack-plugin": "^5.6.3",
+    "html-webpack-pug-plugin": "^4.0.0",
     "mini-css-extract-plugin": "^2.9.2",
     "postcss": "^8.4.49",
     "postcss-loader": "^8.1.1",
     "postcss-preset-env": "^10.1.1",
-    "pug": "^2.0.4",
-    "pug-loader": "^2.4.0",
+    "pug": "^3.0.3",
     "sass": "^1.81.0",
     "sass-loader": "^16.0.3",
+    "simple-pug-loader": "^0.2.1",
+    "svg-sprite-loader": "^6.0.11",
+    "svgo-loader": "^4.0.0",
+    "terser-webpack-plugin": "^5.3.10",
     "webpack": "^5.96.1",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.1.0"
+    "webpack-dev-server": "^5.1.0",
+    "webpack-merge": "^6.0.1"
   }
 }

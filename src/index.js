@@ -1,1 +1,3 @@
-console.log('hello');
+import "@scss/main.scss"
+import "@js/spec"
+import "@js"
